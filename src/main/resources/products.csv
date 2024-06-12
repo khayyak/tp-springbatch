@@ -1,0 +1,5 @@
+productId,productName,quantityInStock,unitPrice,supplier
+1001,Laptop X1,25,999.99,TechCo
+1002,Smartphone Pro,50,599.99,MobileWorld
+1003,Tablet Air,15,399.99,DigiLife
+1004,Wireless Earbuds,100,49.99,SoundPlus

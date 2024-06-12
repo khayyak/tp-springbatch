@@ -19,17 +19,17 @@
         <property name="jobRepository" ref="jobRepository"/>
     </bean>
 
-    <bean id="studentItemReader" class="com.example.technomakers.springbatch.exercice.config.StudentItemReader" />
-    <bean id="studentItemProcessor" class="com.example.technomakers.springbatch.exercice.config.StudentItemProcessor" />
-    <bean id="studentItemWriter" class="com.example.technomakers.springbatch.exercice.config.StudentItemWriter" />
+    <bean id="productItemReader" class="com.example.technomakers.springbatch.exercice.config.ProductItemReader" />
+    <bean id="productItemProcessor" class="com.example.technomakers.springbatch.exercice.config.ProductItemProcessor" />
+    <bean id="productItemWriter" class="com.example.technomakers.springbatch.exercice.config.ProductItemWriter" />
 
     <bean id="stepListener" class="com.example.technomakers.springbatch.exercice.listener.StepListener" />
     <bean id="jobListener" class="com.example.technomakers.springbatch.exercice.listener.JobListener" />
 
-    <batch:job id="studentJob" job-repository="jobRepository">
+    <batch:job id="productJob" job-repository="jobRepository">
         <batch:step id="step1">
             <batch:tasklet>
-                <batch:chunk reader="studentItemReader" processor="studentItemProcessor" writer="studentItemWriter" commit-interval="10" />
+                <batch:chunk reader="productItemReader" processor="productItemProcessor" writer="productItemWriter" commit-interval="10" />
             </batch:tasklet>
             <batch:listeners>
                 <batch:listener ref="stepListener" />
